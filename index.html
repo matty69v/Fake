@@ -1,37 +1,25 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Photo Croissant</title>
-	<style>
-		body {
-			margin: 0;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			height: 100vh;
-			background-color: #000;
-		}
-		img {
-			max-width: 100%;
-			max-height: 100%;
-		}
-	</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Croissant</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: black;
+    }
+    img {
+      display: block;
+      width: 100vw;
+      height: 100vh;
+      object-fit: contain;
+    }
+  </style>
 </head>
 <body>
-	<img id="croissantImage" src="croissant.png" alt="Photo de croissant">
-	<script>
-		document.addEventListener("DOMContentLoaded", () => {
-			const image = document.getElementById("croissantImage");
-			if (image.requestFullscreen) {
-				image.requestFullscreen();
-			} else if (image.webkitRequestFullscreen) { // Safari
-				image.webkitRequestFullscreen();
-			} else if (image.msRequestFullscreen) { // IE/Edge
-				image.msRequestFullscreen();
-			}
-		});
-	</script>
+  <img src="croissant.png" alt="Croissant plein écran" />
 </body>
 </html>
